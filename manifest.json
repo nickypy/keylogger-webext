@@ -1,0 +1,35 @@
+{
+
+  "manifest_version": 2,
+  "name": "Keylogger Extension",
+  "version": "0.1",
+
+  "description": "Keylogger Browser Extension",
+
+  "icons": {
+    "50": "pineapple.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "storage"
+  ],
+
+  "browser_action": {
+    "default_icon": {
+      "50": "pineapple.png"
+    },
+    "default_title": "Keylogger"
+  }
+
+}
